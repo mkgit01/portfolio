@@ -22,7 +22,9 @@
     <!-- NavBar -->
     <nav class="navbar fixed-top p-md-3 navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"><img class="main-logo" src="./images/MKlogo.gif" alt=""></a>
+        <a class="navbar-brand" href="#">
+          <img class="main-logo" src="./images/MKlogo.gif" alt="logo">
+        </a>
         <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,7 +41,7 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Connect</a>
+              <a class="nav-link" href="#connect-w-us">Connect</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Blog</a>
@@ -51,7 +53,7 @@
       <!-- ---------------------------------------------- -->
       <section class="landing-page">
         <div class="hero-text">
-          <p class="fs-1 fw-bold text-white name"><img class="MK-name" src="/images/new-logo.png" alt="name"></p>
+          <div class="intro-name"><img class="MK-name" src="/images/1(2).svg" alt="name"></div>
           <p class="fs-4 fw-light text-white tagline">I am a full stack web developer <br> and a cs geek</p>
           <p class="fs-6 fw-lighter text-white pun">And I love learning new things</p>
         </div>
@@ -77,7 +79,7 @@
   </div>
   <!--Waves end-->
   
-  </div>
+
   <!--Header ends-->
       <section id="test" class="about-me">
         <div class="svg1-wrapper">
@@ -93,7 +95,7 @@
       <section id="skills" class="skills-wrapper">
         <div class="skills">
           <div class="sec-name">
-            <p class="fs-1 fw-bold text-white">My Tech Stack</p>
+            <p class="fs-1 text-white divider">My Tech Stack</p>
           </div>
           <div class="svg2-wrapper">
             <img src="images/tech-stack.svg" alt="tech">
@@ -162,7 +164,7 @@
 
     <section id="projects" class="projects">
       <div class="svg3-wrapper">
-      <p class="fs-1 fw-bold text-white"><img src="images/Laptop.svg" alt="project image"> Projects</p>
+      <p class="fs-1 text-white divider"><img src="images/Laptop.svg" alt="project image"> Projects</p>
       </div>
       <div class="project">
         <div class="project_text">
@@ -219,14 +221,62 @@
         </div>
       </div>   
       </div>
+      <br>
+    </section>
+
+    <section id="connect-w-us" class="connect">
+      <p class="fs-2 text-white separator divider">Connect With Me</p>
+      <div class="connect-wrapper">
+      <div class="contact-element contact-option-wrapper">
+        <p class="text-white fs-2">Hey there!</p>
+        <div class="contact-options">
+          <a href="#"><img src="/images/gmail.svg" alt="gmail"></a>
+          <a href="#"><img src="/images/linkedin.svg" alt="linkedin"></a>
+          <a href="#"><img src="/images/whatsapp.svg" alt="whatsapp"></a>
+        </div>
+      </div>
+      <div class="contact-element contact-form">
+      <div id="cntctus" class="separator edited-background-color text-light"><h2>Contact</h2></div>
+      <form onsubmit="sendEmail()"; reset(); return false; class="px-5 edited-background-color">
+        <div class="mb-3">
+          <label for="validationCustom01" class="form-label text-white">Your Name *</label>
+          <input type="text" class="form-control contact-name-holder" id="username" required>
+          <div class="valid-feedback">
+            <img src="https://img.icons8.com/color/48/000000/checked--v1.png"/>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label text-light">Your email address *</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="name@example.com" required>
+          <div id="emailHelp" class="form-text text-gray">Your email address is never shared with anyone else.</div>
+        </div>
+      
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label text-light">Contact Number</label>
+          <input type="number" class="form-control" id="phone">
+        </div>
+      
+        <div class="form-floating my-2">
+          <textarea class="msg-box" id="message" placeholder="Leave your query here *..." required></textarea>
+      
+        </div>
+        <div class="container text-center py-2">
+            <button type="submit" class="sub-btn btn btn-light mb-4">Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
     </section>
 
 <!-- REMEMBER TO INCLUDE SNAP-SCROLLING ON NEON BTN PAGE -->
       <footer>
         <div class="ftr">
           <div class="logo-container">
-            <a href="#"><img class="main-logo" src="images/MK-Logo-Circle.png" alt="logo"></a>
             <p>You've reached the end ;-;</p>
+            <button class="theme-btn-wrapper">
+              <a class="fs-6 theme-btn"><img class="theme-btn-img" src="/images/theme.svg" alt="dark-theme"> Change Theme</a> 
+             </button>
           </div>
           <div class="credit"><p>© 2022 MK Nayak</p></div>
           <div class="ftr-links">
@@ -238,6 +288,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

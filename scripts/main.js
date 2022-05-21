@@ -14,6 +14,23 @@ nav_toggle.addEventListener('click',function(){
 });
 
 
+function sendEmail(){
+    Email.send({
+        SecureToken: "10852066-0dff-46e8-95ef-3627315b45d6",
+        To : 'minaketann3@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New MK Enquiry",
+        Body : "Name: "+document.getElementById("username").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Phone no: "+ document.getElementById("phone").value
+        + "<br> Message: "+document.getElementById("message").value
+    }).then(
+      message => {
+          alert(message)
+        }
+    )
+}
+
 
 
 // var nav = document.querySelector('nav');
