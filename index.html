@@ -25,9 +25,13 @@
         <a class="navbar-brand" href="#">
           <img class="main-logo" src="./images/MKlogo.gif" alt="logo">
         </a>
+        
+          <img id="theme-icon" src="/images/sun.svg" alt="sun">
+         
         <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="mx-auto"></div>
           <ul class="navbar-nav">
@@ -47,15 +51,18 @@
               <a class="nav-link" href="#">Blog</a>
             </li>
           </ul>
+          
         </div>
+        
       </div>
+      
     </nav>
       <!-- ---------------------------------------------- -->
       <section class="landing-page">
         <div class="hero-text">
           <div class="intro-name"><img class="MK-name" src="/images/1(2).svg" alt="name"></div>
-          <p class="fs-4 fw-light text-white tagline">I am a full stack web developer <br> and a cs geek</p>
-          <p class="fs-6 fw-lighter text-white pun">And I love learning new things</p>
+          <p  class="fs-4 fw-light theme-text tagline">I am a full stack web developer <br> and a cs geek</p>
+          <p  class="fs-6 fw-lighter theme-text pun">And I love learning new things</p>
         </div>
         <div class="hero-page-wrapper">
           <a class="introduction" href="/me.html">More about me</a>
@@ -88,14 +95,14 @@
         
 
         <div class="abtme-text">
-          <p class="fs-2 fw-light text-white tagline">I like to challenge myself and learn while solving problem showing my creativity through work, giving it a unique touch</p>
+          <p class="fs-2 text-white fw-light tagline">I like to challenge myself and learn while solving problem showing my creativity through work, giving it a unique touch</p>
         </div>
       </section>
 
       <section id="skills" class="skills-wrapper">
         <div class="skills">
           <div class="sec-name">
-            <p class="fs-1 text-white divider">My Tech Stack</p>
+            <p class="fs-1 theme-text divider">My Tech Stack</p>
           </div>
           <div class="svg2-wrapper">
             <img src="images/tech-stack.svg" alt="tech">
@@ -106,11 +113,11 @@
 
         <div class="card">
           <div class="card-body">
-            <p class="fs-5 "><img src="images/java.svg" alt="Java logo">Java</p>
-            <p class="fs-5 "><img src="images/javascript.svg" alt="javascript logo">Javascript</p>
-            <p class="fs-5 "><img src="images/kotlin.svg" alt="Kotlin logo">Kotlin</p>
-            <p class="fs-5 "><img src="images/Python.svg" alt="Python logo">Python</p>
-            <p class="fs-5 "><img src="images/C.svg" alt="C logo"> C</p>
+            <p class="fs-5"><img src="images/java.svg" alt="Java logo">Java</p>
+            <p class="fs-5"><img src="images/javascript.svg" alt="javascript logo">Javascript</p>
+            <p class="fs-5"><img src="images/kotlin.svg" alt="Kotlin logo">Kotlin</p>
+            <p class="fs-5"><img src="images/Python.svg" alt="Python logo">Python</p>
+            <p class="fs-5"><img src="images/C.svg" alt="C logo"> C</p>
 
           </div>
         </div>
@@ -164,14 +171,14 @@
 
     <section id="projects" class="projects">
       <div class="svg3-wrapper">
-      <p class="fs-1 text-white divider"><img src="images/Laptop.svg" alt="project image"> Projects</p>
+      <p class="fs-1 theme-text divider"><img src="images/Laptop.svg" alt="project image"> Projects</p>
       </div>
       <div class="project">
         <div class="project_text">
-        <p class="fs-2"><strong>Dreamcatcher Fan-site</strong></p>
-        <p class="proj-desc fs-6">This is a fan-site for the k-pop group Dreamcatcher.This website holds information about the group and playable music snippets</p>
+        <p class="fs-2 text-light"><strong>Dreamcatcher Fan-site</strong></p>
+        <p class="proj-desc fs-6 text-light">This is a fan-site for the k-pop group Dreamcatcher.This website holds information about the group and playable music snippets</p>
         <hr>
-        <p class="proj-desc fs-6">Technologies used: <strong>HTML, CSS, JAVASCRIPT, BOOTSTRAP</strong></p>
+        <p class="proj-desc fs-6 text-light">Technologies used: <strong>HTML, CSS, JAVASCRIPT, BOOTSTRAP</strong></p>
         <div class="project-links">
         <a target="_blank" href="https://clownkingmk.000webhostapp.com/index.html">LIVE Project</a>
         <a target="_blank" href="https://github.com/mkgit01/Dreamcatcher-Website">GitHub</a>
@@ -183,10 +190,10 @@
       <div class="project-2"> 
         <img class="project_img rounded float-end img-fluid" src="images/FeedApp.png" alt="project 1">
         <div class="project_text">
-          <p class="fs-2"><strong>News App</strong></p>
-          <p class="fs-6">This is an android app which delivers tech related news everyday using apis, It also supports in-app browsing</p>
+          <p class="fs-2 text-light"><strong>News App</strong></p>
+          <p class="fs-6 text-light">This is an android app which delivers tech related news everyday using apis, It also supports in-app browsing</p>
           <hr>
-          <p class="proj-desc fs-6">Technologies used: <strong>Kotlin, Android Studio</strong></p>
+          <p class="proj-desc fs-6 text-light">Technologies used: <strong>Kotlin, Android Studio</strong></p>
           <div class="project-links">
         <a target="_blank" href="https://github.com/mkgit01/Feed">GitHub</a>
         </div>
@@ -195,10 +202,10 @@
 
       <div class="project">
         <div class="project_text">
-        <p class="fs-2"><strong>Discord Multipurpose Bot</strong></p>
-        <p class="fs-6">This is my very own discord bot made with Java. It can manage moderation as well as entertainment</p>
+        <p class="fs-2 text-light"><strong>Discord Multipurpose Bot</strong></p>
+        <p class="fs-6 text-light">This is my very own discord bot made with Java. It can manage moderation as well as entertainment</p>
         <hr>
-        <p class="proj-desc fs-6">Technologies used: <strong>JDA, Gradle</strong></p>
+        <p class="proj-desc fs-6 text-light">Technologies used: <strong>JDA, Gradle</strong></p>
         <div class="project-links">
         <!-- <a target="_blank" href="https://clownkingmk.000webhostapp.com/index.html">Invite</a> -->
         <a href="https://github.com/mkgit01/Clown-King-Bot">GitHub</a>
@@ -211,10 +218,10 @@
       <div class="project-2"> 
         <img class="project_img rounded float-end img-fluid" src="images/PyCalc.jpg" alt="project 1">
         <div class="project_text">
-          <p class="fs-2"><strong>Python GUI calculator</strong></p>
-          <p class="fs-6">This is a GUI calculator made with Python and PyQT5</p>
+          <p class="fs-2 text-light"><strong>Python GUI calculator</strong></p>
+          <p class="fs-6 text-light">This is a GUI calculator made with Python and PyQT5</p>
           <hr>
-          <p class="proj-desc fs-6">Technologies used: <strong>Python, PyQT5, Bash</strong></p>
+          <p class="proj-desc fs-6 text-light">Technologies used: <strong>Python, PyQT5, Bash</strong></p>
           <div class="project-links">
         <a href="public/calc.zip" download="Python calculator">Download Project</a>
         <a target="_blank" href="https://github.com/mkgit01/PyGUI-Calculator">GitHub</a>
@@ -225,10 +232,10 @@
     </section>
 
     <section id="connect-w-us" class="connect">
-      <p class="fs-2 text-white separator divider">Connect With Me</p>
+      <p class="fs-2 theme-text separator divider">Connect With Me</p>
       <div class="connect-wrapper">
       <div class="contact-element contact-option-wrapper">
-        <p class="text-white fs-2">Hey there!</p>
+        <p class="theme-text fs-2">Hey there!</p>
         <div class="contact-options">
           <a href="#"><img src="/images/gmail.svg" alt="gmail"></a>
           <a href="#"><img src="/images/linkedin.svg" alt="linkedin"></a>
@@ -239,7 +246,7 @@
       <div id="cntctus" class="separator edited-background-color text-light"><h2>Contact</h2></div>
       <form onsubmit="sendEmail()"; reset(); return false; class="px-5 edited-background-color">
         <div class="mb-3">
-          <label for="validationCustom01" class="form-label text-white">Your Name *</label>
+          <label for="validationCustom01" class="form-label text-light">Your Name *</label>
           <input type="text" class="form-control contact-name-holder" id="username" required>
           <div class="valid-feedback">
             <img src="https://img.icons8.com/color/48/000000/checked--v1.png"/>
@@ -274,11 +281,8 @@
         <div class="ftr">
           <div class="logo-container">
             <p>You've reached the end ;-;</p>
-            <button class="theme-btn-wrapper">
-              <a class="fs-6 theme-btn"><img class="theme-btn-img" src="/images/theme.svg" alt="dark-theme"> Change Theme</a> 
-             </button>
           </div>
-          <div class="credit"><p>© 2022 MK Nayak</p></div>
+          <div class="credit text-light"><p>© 2022 MK Nayak</p></div>
           <div class="ftr-links">
             <a href="#">Get In Touch</a>
           <a href="#">Back to top</a>
