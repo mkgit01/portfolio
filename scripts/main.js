@@ -7,9 +7,12 @@ var counter = true;
 nav_toggle.addEventListener('click',function(){
     if(counter == true){
         nav.classList.add('bg-black');
+        trigger.style.display = "none";
+
         counter = false;
     }else if(counter == false){
         nav.classList.remove('bg-black');
+        trigger.style.display = "block";
         counter = true;
     };
 });
