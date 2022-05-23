@@ -247,10 +247,10 @@
       <div id="cntctus" class="separator edited-background-color text-light"><h2>Contact</h2></div>
       <form reset(); return false; class="px-5 edited-background-color" action="https://formsubmit.co/ed2887a57bc7a0d7e07fcdb768f6083d" method="POST">
           <!-- Honeypot -->
-          <input type="text" name="_honey" style="display: none;">
+          <input type="text" class="honeypot" name="_honey">
           
           <!-- Disable Captcha -->
-          <input type="text" name="_captcha" value="false">
+          <input type="hidden" name="_captcha" value="false">
           
         <div class="mb-3">
           <label for="validationCustom01" class="form-label text-light">Your Name *</label>
