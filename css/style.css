@@ -337,6 +337,9 @@ transition: all ease 0.3s;
 .contact-name-holder{
     width: 100%;
 }
+.honeypot{
+    display: none;
+}
 .sub-btn{
     border: 0;
 }
