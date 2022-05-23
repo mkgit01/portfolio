@@ -69,6 +69,7 @@
         </div>
         
       </section>
+      
          <!--Waves Container-->
 <div>
   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -102,7 +103,7 @@
       <section id="skills" class="skills-wrapper">
         <div class="skills">
           <div class="sec-name">
-            <p class="fs-1 text-white divider">My Tech Stack</p>
+            <p class="fs-1 theme-text divider">My Tech Stack</p>
           </div>
           <div class="svg2-wrapper">
             <img src="images/tech-stack.svg" alt="tech">
@@ -244,10 +245,10 @@
       </div>
       <div class="contact-element contact-form">
       <div id="cntctus" class="separator edited-background-color text-light"><h2>Contact</h2></div>
-      <form onsubmit="sendEmail()"; reset(); return false; class="px-5 edited-background-color">
+      <form reset(); return false; class="px-5 edited-background-color" action="https://formsubmit.co/mknayakofficial@gmail.com" method="POST">
         <div class="mb-3">
           <label for="validationCustom01" class="form-label text-light">Your Name *</label>
-          <input type="text" class="form-control contact-name-holder" id="username" required>
+          <input type="text" class="form-control contact-name-holder" name="Name:" id="username" required>
           <div class="valid-feedback">
             <img src="https://img.icons8.com/color/48/000000/checked--v1.png"/>
           </div>
@@ -255,17 +256,17 @@
 
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label text-light">Your email address *</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="name@example.com" required>
+          <input type="email" class="form-control" name="Email:" id="email" aria-describedby="emailHelp" placeholder="name@example.com" required>
           <div id="emailHelp" class="form-text text-gray">Your email address is never shared with anyone else.</div>
         </div>
       
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label text-light">Contact Number</label>
-          <input type="number" class="form-control" id="phone">
+          <input type="number" class="form-control" name="Phone&nbsp;No:" id="phone">
         </div>
       
         <div class="form-floating my-2">
-          <textarea class="msg-box" id="message" placeholder="Leave your query here *..." required></textarea>
+          <textarea class="msg-box" name="Message:" id="message" placeholder="Leave your query here *..." required></textarea>
       
         </div>
         <div class="container text-center py-2">

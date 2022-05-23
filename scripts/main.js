@@ -15,22 +15,22 @@ nav_toggle.addEventListener('click',function(){
 });
 
 //Contact form back-end
-function sendEmail(){
-    Email.send({
-        SecureToken: "10852066-0dff-46e8-95ef-3627315b45d6",
-        To : 'minaketann3@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "New MK Enquiry",
-        Body : "Name: "+document.getElementById("username").value
-        + "<br> Email: " + document.getElementById("email").value
-        + "<br> Phone no: "+ document.getElementById("phone").value
-        + "<br> Message: "+document.getElementById("message").value
-    }).then(
-      message => {
-          alert(message)
-        }
-    )
-}
+// function sendEmail(){
+//     Email.send({
+//         SecureToken: "10852066-0dff-46e8-95ef-3627315b45d6",
+//         To : 'minaketann3@gmail.com',
+//         From : document.getElementById("email").value,
+//         Subject : "New MK Enquiry",
+//         Body : "Name: "+document.getElementById("username").value
+//         + "<br> Email: " + document.getElementById("email").value
+//         + "<br> Phone no: "+ document.getElementById("phone").value
+//         + "<br> Message: "+document.getElementById("message").value
+//     }).then(
+//       message => {
+//           alert(message)
+//         }
+//     )
+// }
 
 //Theme toggle
 let trigger = document.getElementById("theme-icon")
@@ -42,7 +42,7 @@ trigger.onclick = function(){
     document.body.classList.toggle("light-theme");
     if(document.body.classList.contains("light-theme")){
         trigger.src = "/images/moon.svg";
-        nav.classList.add('bg-black');
+        nav.classList.add('bg-light');
         for(let i=0; i<themeText.length; i++){
             themeText.item(i).classList.add("text-dark")
         }
@@ -54,7 +54,7 @@ trigger.onclick = function(){
         for(let i=0; i<themeText.length; i++){
             themeText.item(i).classList.remove("text-dark")
         }
-        nav.classList.remove('bg-black');
+        nav.classList.remove('bg-light');
     }
 }
 

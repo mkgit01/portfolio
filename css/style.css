@@ -2,9 +2,15 @@
     --_Color-primary: black;
         --_Detail-primary:white;
     --_Color-secondary: #9932cc;
-
+    --_Glow-text: 0 0 0.125em hsl(0 0% 100% / 0.5),0 0 0.45em var(--_Color-secondary);
     /* --_Color-primary: rgb(255, 255, 255);
     --_Detail-primary:rgb(0, 0, 0); */
+    --_Scrollbar-margin:6em;
+    --_Glow-buttonClr:var(--_Color-secondary);
+    --_Glow-buttonShadow:inset 0 0 0.5em 0 var(--_Color-secondary), 0 0 0.5em 0 var(--_Color-secondary);
+    --_Skill-color:#1d0033;
+    --_Scrollbar-color: hsl(268, 91%, 18%);
+    --Toggler-color: transparent;
 }
 .theme-text{
     color: white;
@@ -12,6 +18,14 @@
 .light-theme{
     --_Color-primary: rgb(255, 255, 255);
     --_Detail-primary:rgb(0, 0, 0);
+    --_Scrollbar-margin:0;
+    --_Glow-button: var(--_Color-secondary);
+    --_Glow-text:none;
+    --_Glow-buttonClr:var(--_Color-primary);
+    --_Glow-buttonShadow:none;
+    --_Skill-color: rgb(82, 17, 114);
+    --_Scrollbar-color: white;
+    --Toggler-color:black;
 }
 html{
     scroll-behavior: smooth;
@@ -33,15 +47,18 @@ z-index: 2;
     aspect-ratio: 1;
     border-radius: 50%;
 }
+.navbar-toggler{
+    background-color: var(--Toggler-color);
+}
 .navbar .navbar-nav .nav-link{
-    color: white;
+    color: var(--_Detail-primary);
 }
 .navbar .navbar-nav .nav-link:hover{
     background-color: transparent;
     color: var(--_Color-secondary);
 }
 .resume-cv{
-    border: white 0.125em solid;
+    border: var(--_Detail-primary) 0.125em solid;
     padding: 0.28em 1em;
     border-radius: 90vw;
 }
@@ -62,9 +79,9 @@ width: 1em;
     border: .25em solid hsl(268, 91%, 18%) ;
 }
 ::-webkit-scrollbar-track{
-    background: hsl(268, 91%, 18%);
+    background: var(--_Scrollbar-color);
     border-radius: 100vw;
-    margin-block: 6em;
+    margin-block: var(--_Scrollbar-margin);
     
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -98,16 +115,16 @@ background-image: linear-gradient(45deg, #8200cb 0%, rgb(34, 11, 56) 53%); */
 }
 .introduction{
     font-size: 2rem;
-
+    background: var(--_Glow-button);
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--_Color-secondary);   
+    color: var(--_Glow-buttonClr);   
     border: var(--_Color-secondary) 0.125em solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5),0 0 0.45em var(--_Color-secondary);
-    box-shadow: inset 0 0 0.5em 0 var(--_Color-secondary), 0 0 0.5em 0 var(--_Color-secondary);
+    text-shadow: var(--_Glow-text);
+    box-shadow: var(--_Glow-buttonShadow);
     position: relative;
 }
 .introduction::before{
@@ -126,8 +143,9 @@ background-image: linear-gradient(45deg, #8200cb 0%, rgb(34, 11, 56) 53%); */
 }
 .introduction:hover{
     background: var(--_Color-secondary);
-    color: var(--_Color-primary);
+    color: white;
     text-shadow: none;
+    box-shadow: inset 0 0 0.5em 0 var(--_Color-secondary), 0 0 0.5em 0 var(--_Color-secondary);
 }
 .introduction:hover::before{
     opacity: 1;
@@ -174,12 +192,12 @@ background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
     gap: var(--_spacer);
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    padding: 0 var(--_spacer) var(--_spacer);
+    padding:var(--_spacer) var(--_spacer);
 }
 .skill-card-wrapper div{
     width:max-content;
     aspect-ratio: 9/16;
-    background-color: #1d0033;
+    background-color:var(--_Skill-color);
     color: white;
     display: grid;
     gap: var(--_spacer);
@@ -377,19 +395,35 @@ background-image: linear-gradient(0deg, #160028 58%, #000000 100%);
 margin: 0 1em;
 }
 
-
+@media screen and (max-height:565px) and (max-width:973px){
+    .landing-page{
+        margin-bottom: 19em;
+    }
+    .about-me{
+        margin-bottom: 8em;
+        padding: 2em 0em;
+        height: 200%;
+    }
+    .skill-card-wrapper{
+        margin-top: 15%;
+    }
+}
 @media screen and (max-width:992px){
-    .resume-cv{
-        border: none;
-        padding: 0.28em 1em;
-        border-radius: 0vw;
-    }
-    .resume-cv:hover{
-        border: none;
-    }
+.resume-cv{
+    border: none;
+    padding: 0.28em 1em;
+    border-radius: 0vw;
+}
+.resume-cv:hover{
+    border: none;
+}
     
 }
 @media screen and (max-width:973px){
+
+    .navbar .navbar-nav .nav-link{
+        color: white;
+    }
     .landing-page{
         width: 100%;
         padding-top: 0;
@@ -452,7 +486,7 @@ background-image: linear-gradient(0deg, #160028 58%, #000000 100%);
     width: 100%;
     height:40vh;
     margin-bottom: 1em;
-    background-color:#000000;
+    background-color:var(--_Color-primary);
     display: grid;
     grid-template-rows: repeat(2,1fr);
     justify-content: space-evenly;
@@ -469,7 +503,7 @@ background-image: linear-gradient(0deg, #160028 58%, #000000 100%);
 }
 .about-me{
     width: 100%;
-    height:70vh;
+    /* height:70vh; */
     background-color: #8a2be2;
 background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
 
