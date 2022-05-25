@@ -1,10 +1,77 @@
+  /* loader */
+  .loader-wrapper{
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+  }
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: rgb(217, 93, 255);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+/* ----------- */
 :root{
     --_Color-primary: black;
         --_Detail-primary:white;
     --_Color-secondary: #9932cc;
     --_Glow-text: 0 0 0.125em hsl(0 0% 100% / 0.5),0 0 0.45em var(--_Color-secondary);
-    /* --_Color-primary: rgb(255, 255, 255);
-    --_Detail-primary:rgb(0, 0, 0); */
     --_Scrollbar-margin:6em;
     --_Glow-buttonClr:var(--_Color-secondary);
     --_Glow-buttonShadow:inset 0 0 0.5em 0 var(--_Color-secondary), 0 0 0.5em 0 var(--_Color-secondary);
@@ -32,14 +99,10 @@ html{
 }
 body{
     margin: 0;
-    /* min-height: 500vh; */
     background-color: var(--_Color-primary);
     scroll-behavior: smooth;
 }
 .navbar{
-/* box-shadow: 0px 0px 0px 0.5px darkorchid; */
-/* -webkit-box-shadow: 0px 0.25px 0px 0px darkorchid;
--moz-box-shadow: 0px 0.25px 0px 0px darkorchid; */
 z-index: 2;
 }
 .main-logo{
@@ -82,23 +145,18 @@ width: 1em;
     background: var(--_Scrollbar-color);
     border-radius: 100vw;
     margin-block: var(--_Scrollbar-margin);
-    
 }
 ::-webkit-scrollbar-thumb:hover{
     background: rgb(84, 19, 116);
 }
 .landing-page{
-    /* background-color: #8200cb;
-background-image: linear-gradient(45deg, #8200cb 0%, rgb(34, 11, 56) 53%); */
     width: 100%;
-    /* padding-top: em; */
     height: calc(100vh - 3.5em);
     display: flex;
     justify-content: space-evenly;
     place-items: center;
 }
 .intro-name{
-    /* font-family: 'Water Brush', cursive; */
     font-family: 'Dancing Script', cursive;
     font-size: 10px;
     width: 35em;
@@ -108,10 +166,8 @@ background-image: linear-gradient(45deg, #8200cb 0%, rgb(34, 11, 56) 53%); */
 .divider{
     font-family: 'Dancing Script', cursive;
 }
-
 .MK-name{
     width: 100%;
-    
 }
 .introduction{
     font-size: 2rem;
@@ -139,7 +195,6 @@ background-image: linear-gradient(45deg, #8200cb 0%, rgb(34, 11, 56) 53%); */
     filter: blur(1em);
     opacity: 0.7;
     pointer-events: none;
-
 }
 .introduction:hover{
     background: var(--_Color-secondary);
@@ -172,7 +227,6 @@ background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
     place-items: center;
     z-index: 1;
 }
-
 .skills{
     width: 100%;
     height:70vh;
@@ -218,7 +272,6 @@ scroll-snap-align: start;
 }
 .projects{
     height: 60vh;
-    /* padding:0 1em; */
 }
 .project{
     display: flex;
@@ -243,7 +296,6 @@ background-image: linear-gradient(225deg, #4f007d 0%, #000000 100%);
     padding:2em 1em;
     background-color: var(--_Color-primary);
 background-image: linear-gradient(225deg, #000000 0%, #4f007d 100%);
-
 }
 .project-2{
     height: max-content;
@@ -252,7 +304,6 @@ background-image: linear-gradient(225deg, #000000 0%, #4f007d 100%);
     float: right;
     padding:2em 1em;
     margin-bottom: 1em;
-
 background-color: var(--_Color-primary);
 background-image: linear-gradient(225deg, #4f007d 0%, #000000 100%);
 transition: all ease 0.3s;
@@ -294,7 +345,6 @@ transition: all ease 0.3s;
     object-fit: contain;
 }
 .projects p{
-    /* color: #d1d1d1; */
     padding: 0 1em;
 }
 .separator{
@@ -326,7 +376,6 @@ transition: all ease 0.3s;
 .contact-options{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    /* grid-template-rows: repeat(2,1fr); */
     gap: 3em;
 }
 .msg-box{
@@ -346,7 +395,6 @@ transition: all ease 0.3s;
 .sub-btn:hover{
     background-color: #9932cc;
     color: #ffffff;
-    
 }
 /* --------------------------------------------------------------------- */
 .ftr{
@@ -397,7 +445,6 @@ background-image: linear-gradient(0deg, #160028 58%, #000000 100%);
 .logo-container .main-logo{
 margin: 0 1em;
 }
-
 @media screen and (max-height:565px) and (max-width:973px){
     .landing-page{
         margin-bottom: 19em;
@@ -420,10 +467,8 @@ margin: 0 1em;
 .resume-cv:hover{
     border: none;
 }
-    
 }
 @media screen and (max-width:973px){
-
     .navbar .navbar-nav .nav-link{
         color: white;
     }
@@ -446,7 +491,6 @@ margin: 0 1em;
     .svg1-wrapper img{
         width: 15rem;
     }
-
     .connect-wrapper{
         flex-direction: column;
         margin-top: 2em;
@@ -461,10 +505,8 @@ margin: 0 1em;
     .contact-options{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        /* grid-template-rows: repeat(2,1fr); */
         gap: 3em;
     }
-
  .ftr{
      position: relative;
     display: grid;
@@ -506,10 +548,8 @@ background-image: linear-gradient(0deg, #160028 58%, #000000 100%);
 }
 .about-me{
     width: 100%;
-    /* height:70vh; */
     background-color: #8a2be2;
 background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
-
     display: grid;
     grid-template-rows: repeat(2,1fr);
     justify-content: space-evenly;
@@ -524,7 +564,6 @@ background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
     .project{
         display: grid;
         grid-template-rows: repeat(2,1fr);
-        
         margin-bottom: 1em;
         padding:1em 1em;
         place-items: center;
@@ -549,7 +588,6 @@ background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
         float: right;
         padding:1em 1em;
         margin-bottom: 1em;
-    
     background-color: #000000;
     background-image: linear-gradient(225deg, #000000 0%, #4f007d 100%);
     }
