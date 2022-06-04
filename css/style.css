@@ -69,7 +69,7 @@
 /* ----------- */
 :root{
     --_Color-primary: black;
-        --_Detail-primary:white;
+    --_Detail-primary:white;
     --_Color-secondary: #9932cc;
     --_Glow-text: 0 0 0.125em hsl(0 0% 100% / 0.5),0 0 0.45em var(--_Color-secondary);
     --_Scrollbar-margin:6em;
@@ -215,6 +215,10 @@ width: 1em;
     padding: 0 1em;
     text-align: center;
 }
+.tagline em{
+    padding: 0;
+    color: darkorchid;
+}
 .about-me{
 
     width: 100%;
@@ -230,7 +234,6 @@ background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
 .skills{
     width: 100%;
     height:70vh;
-    background-color:var(--_Color-primary);
     display: flex;
     justify-content: space-evenly;
     place-items: center;
@@ -238,6 +241,7 @@ background-image: linear-gradient(180deg, #8a2be2 58%, #000000 100%);
 .svg2-wrapper img{
     width: 30rem;
 }
+
 .skill-card-wrapper{
     --_spacer: 1em;
     display: grid;
@@ -356,6 +360,8 @@ transition: all ease 0.3s;
     display: flex;
     flex-direction: column;
     -ms-flex-direction: column;
+   
+
 }
 .connect-wrapper{
     width: 100%;
