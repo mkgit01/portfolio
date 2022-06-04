@@ -1,103 +1,3 @@
-/* .body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.scroll-wrapper{
-    position: fixed;
-    left: 50%;
-    bottom: 10%;
-    transform: translate(-50%, 0);
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .chevron {
-    position: absolute;
-    text-align: center;
-    width: 2.1rem;
-    height: 0.48rem;
-    margin: auto;
-    opacity: 0;
-    transform: scale(0.3);
-    -webkit-animation: move-chevron 3s ease-out infinite;
-            animation: move-chevron 3s ease-out infinite;
-  }
-  
-  .chevron:first-child {
-    -webkit-animation: move-chevron 3s ease-out 1s infinite;
-            animation: move-chevron 3s ease-out 1s infinite;
-  }
-  
-  .chevron:nth-child(2) {
-    -webkit-animation: move-chevron 3s ease-out 2s infinite;
-            animation: move-chevron 3s ease-out 2s infinite;
-  }
-  
-  .chevron:before,
-  .chevron:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background-color: #000000;
-    background-image: linear-gradient(180deg, #ffffff 50%, #7500a9 100%);
-  }
-  
-  .chevron:before {
-    left: 0;
-    transform: skewY(30deg);
-  }
-  
-  .chevron:after {
-    right: 0;
-    width: 50%;
-    transform: skewY(-30deg);
-  }
-  
-  @-webkit-keyframes move-chevron {
-    25% {
-      opacity: 1;
-    }
-    33.3% {
-      opacity: 1;
-      transform: translateY(2.28rem);
-    }
-    66.6% {
-      opacity: 1;
-      transform: translateY(3.12rem);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(4.8rem) scale(0.5);
-    }
-  }
-  
-  @keyframes move-chevron {
-    25% {
-      opacity: 1;
-    }
-    33.3% {
-      opacity: 1;
-      transform: translateY(2.28rem);
-    }
-    66.6% {
-      opacity: 1;
-      transform: translateY(3.12rem);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(4.8rem) scale(0.5);
-    }
-  } */
-
-  /* ----------------------------- */
   *{
     scroll-behavior: smooth;
   }
@@ -306,7 +206,6 @@ footer{
   display: grid;
   place-items: center;
   justify-content: center;
-  gap: 1em;
   margin:0 calc(100vw - 100%);
 }
 footer p{
@@ -315,27 +214,29 @@ footer p{
 .credit{
   position: absolute;
   bottom: 5px;
+
+}
+.credit p{
   text-align: center;
 }
 .sticky-section{
   position: sticky;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10vh;
-  bottom: 0;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  justify-content: center;
+  bottom: 10%;
 }
 .sticky-section img{
   height: 10rem;
   width: 10rem;
   border-radius: 100vh;
   object-fit: cover;
-  margin-left: 1.5em;
   border: 2px solid darkorchid;
 
 }
 .sticky-section p{
   text-align: center;
-  margin-bottom: 1em;
 }
 .contact-options{
   position: absolute;
@@ -347,7 +248,11 @@ footer p{
   z-index: 100;
 }
 .c-options{
+  position: absolute;
   padding:5em 15em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
   display: grid;
   place-items: center;
   justify-content: center;
@@ -356,46 +261,59 @@ footer p{
   -webkit-box-shadow: 0px -1px 11px 0px rgba(0,0,0,0.75) inset;
   -moz-box-shadow: 0px -1px 11px 0px rgba(0,0,0,0.75) inset;
 }
-.close-btn{
+svg.close-btn{
   cursor: pointer;
   margin: 0.5em 2em;
 }
-.c-options button{
-  width: 5rem;
-  border: 3px solid;
-  padding: .25em 1em;
-  outline: none;
-  border-radius: 100vw;
-  color: darkorchid;
-  background-color: inherit;
-  margin-left: 4em;
-  transition: all ease 0.2s;
+svg.close-btn path{
+  fill: rgb(255, 255, 255);
 }
-.c-options button:hover{
-  color: rgb(255, 255, 255);
+svg.close-btn:hover path{
+  fill: darkorchid;
+  transition: all ease 0.3s;
+}
+.c-options button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.ftr-btn a{
+  width: 5rem;
+  text-decoration: none;
+  color: darkorchid;
+  padding: .5em 1em;
+  border: 3px solid;
+  border-radius: 100vw;
+  background-color: transparent;
+  transition: all ease 0.2s;
+
+}
+.ftr-btn a:hover{
+  color: white;
   background-color: darkorchid;
   border: 3px solid darkorchid;
 }
-.ftr-btn a{
-  text-decoration: none;
-  color: darkorchid;
-}
-.ftr-btn:hover a{
-  color: white;
-}
 
 .sticky-section button{
-  width: 5rem;
+  width: 8em;
   border: 3px solid;
   outline: none;
   border-radius: 100vw;
   color: darkorchid;
   background-color: inherit;
-  margin-left: 4em;
   transition: all ease 0.2s;
+  padding: 1em 0em;
 }
 .sticky-section button:hover{
   color: rgb(255, 255, 255);
   background-color: darkorchid;
   border: 3px solid darkorchid;
+}
+@media screen and (max-width:760px) {
+  .c-options{
+    padding:5em 0em;
+  }
+  .sticky-section{
+    bottom: 15%;
+  }
 }
