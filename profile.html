@@ -23,13 +23,6 @@
 <div id="preloader" class="loader-wrapper">
   <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
-          <!-- <div class="scroll-wrapper">
-            <div class="container">
-              <div class="chevron"></div>
-              <div class="chevron"></div>
-              <div class="chevron"></div>
-            </div>
-          </div> -->
  <div id="banner" class="banner">
    <h1 class="text-white fw-bold">Some random quote</h1>
  </div>
@@ -38,7 +31,7 @@
  <section id="main-content" class="main-page">
    
   <div class="landing-wrapper">
-    <div class="avatar"><img class="rounded fluid" src="/images/avatar.jpg" alt="avatar"></div>
+    <div class="avatar"><img loading="lazy" class="rounded fluid" src="/images/avatar.jpg" alt="avatar"></div>
     
     <div class="avatar-text-main">
     <!-- <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt!</h2>  -->
@@ -47,7 +40,7 @@
    </div>
 
    <div class="second-pg">
-     <div class="scs-college"><img class="rounded" src="/images/scscollege.png" alt="scs college"></div>
+     <div class="scs-college"><img loading="lazy" class="rounded" src="/images/scscollege.png" alt="scs college"></div>
       <p class="avatar-text fs-3">I finished my 12th grade at <strong>Samant Chandra Sekhar Autonomous college</strong> with biology as my optional. But for a long time computer science and software developement was really interesting to me and I wanted to get into the subject. So after my boards in S.C.S(A) college I chose computer science as my future!</p>
     </div>
    
@@ -55,12 +48,12 @@
    <div class="third-pg">
    <p class="avatar-text fs-3">I completed basic frontend web developement on my own before I joined Mangala Mahavidyalaya and I also learned thoroughly about some programming languages. My first programming language was Java! Then I continued to learn more languages and added Kotlin, C, Python and JavaScript to the bucket, while still polishing my web developement skills and learning Android Developement at the same time. Because of project based learning and having a great group of friends I learned a lot of technologies and it's applications over the year.</p>
    <!-- <div class="web-wrapper"> -->
-     <div class="skill-logos"><img src="/images/html.svg" alt="html logo"><img src="/images/css.svg" alt="css logo"><img src="/images/javascript.svg" alt="javascript"></div>
+     <div class="skill-logos"><img loading="lazy" src="/images/html.svg" alt="html logo"><img loading="lazy" src="/images/css.svg" alt="css logo"><img loading="lazy" src="/images/javascript.svg" alt="javascript"></div>
    <!-- <img src="/images/http.svg" alt="http"></div> -->
   </div>
 
  <div class="fourth-pg">
-  <div class="thinking-svg"><img src="/images/thinking.svg" alt="thinking illustration"></div>
+  <div class="thinking-svg"><img loading="lazy" src="/images/thinking.svg" alt="thinking illustration"></div>
   <p class="avatar-text fs-3">I just really love and enjoy the process of solving problems, learning so many new things in different domains of this field. I want to continue learning new things and properly implement everything, solve as many problems I can while creating new innovative tech that makes everyone's life easier.</p>
  </div>  
 </section>
@@ -68,17 +61,22 @@
 
  <footer id="footer">
    <div id="contact-options" class="contact-options">
-    <img onclick="closeOptions()" id="closebtn" class="close-btn" src="/images/close-btn.svg" alt="close btn">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg class="close-btn" onclick="closeOptions()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" width="50px" height="50px">
+    <g id="surface424876">
+    <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 31.203125 25 L 44.832031 4.554688 C 45.035156 4.246094 45.054688 3.855469 44.882812 3.527344 C 44.707031 3.203125 44.367188 3 44 3 L 36.660156 3 C 36.332031 3 36.027344 3.160156 35.839844 3.429688 L 25 19 L 14.160156 3.429688 C 13.972656 3.160156 13.667969 3 13.339844 3 L 6 3 C 5.632812 3 5.292969 3.203125 5.117188 3.527344 C 4.945312 3.851562 4.964844 4.246094 5.167969 4.554688 L 18.796875 25 L 5.167969 45.445312 C 4.964844 45.753906 4.945312 46.144531 5.117188 46.472656 C 5.292969 46.796875 5.632812 47 6 47 L 13.339844 47 C 13.667969 47 13.972656 46.839844 14.160156 46.570312 L 25 31 L 35.839844 46.570312 C 36.027344 46.839844 36.332031 47 36.660156 47 L 44 47 C 44.367188 47 44.707031 46.796875 44.882812 46.472656 C 45.054688 46.148438 45.035156 45.753906 44.832031 45.445312 Z M 31.203125 25 "/>
+    </g>
+    </svg>
     <div class="c-options">
       <a href="mailto:mknayakofficial@gmail.com"><img loading="lazy" src="/images/gmail.svg" alt="gmail"></a>
       <a target="_blank" href="https://www.linkedin.com/in/minaketan-nayak/"><img loading="lazy" src="/images/linkedin.svg" alt="linkedin"></a>
       <a target="_blank" href="https://wa.me/+918895327771"><img loading="lazy" src="/images/whatsapp.svg" alt="whatsapp"></a>
-      <button class="ftr-btn"><a target="_blank" href="https://mkgit01.github.io/">Home</a></button>
+      <button class="ftr-btn"><a href="https://mkgit01.github.io/">Home</a></button>
     </div>
    </div>
 
   <div class="sticky-section">
- <img src="/images/me-ftr.png" alt="my pic">
+ <img loading="lazy" src="/images/me-ftr.png" alt="my pic">
  <p class="text-white fs-2">So let's connect!</p>
  <button onclick="showOptions()" id="connect-btn" class="ftr-btn">Say Hi!</button>
 </div>
