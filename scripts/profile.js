@@ -4,11 +4,11 @@ window.addEventListener("load", function(){
   loader.style.display = "none";
 })
 
+
 //Footer connect button
 const connectBtn = document.getElementById('connect-btn');
 const conOptions = document.getElementById('contact-options');
 const closebtn = document.getElementById('closebtn');
-let buttonClick = true;
 conOptions.style.display = "none";
 
 function showOptions(){
@@ -80,3 +80,16 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
+
+//Resume Show button
+const resumeBtn = document.getElementById('resume-btn');
+const resumeContainer = document.getElementById('resume-wrapper');
+const resumeClosebtn = document.getElementById('resume-closebtn');
+resumeContainer.style.display = "none";
+
+function showResume(){
+    resumeContainer.style.display = "block";
+}
+function closeResume(){
+    resumeContainer.style.display = "none";
+}
