@@ -92,15 +92,18 @@ body{
   z-index: -1;
 }
 .banner h1{
+  font-family: 'Dancing Script', cursive !important;
   position: sticky;
-  top: 25vh;
+  top: 20vh;
+  color:rgb(209, 209, 209);
+  font-size: 3rem;
 }
 
 .main-page{
   background-color: currentColor;
   width: 100%;
   z-index: 1;
-  padding: 2vh 1em;
+  padding: 2vh 4em;
   box-shadow: 0 0 1em 0.25em black;
 }
 .main-page::after{
@@ -108,6 +111,11 @@ body{
   clear: both;
   display: table;
 }
+em.tagline{
+  color: darkorchid;
+  font-family:'Joan', serif;
+}
+
 .landing-wrapper{
   margin: 20vh auto;
   height: 100vh;
@@ -133,7 +141,6 @@ padding: 1em;
 .main-page p{
   font-family:'Joan', serif;
   color: rgba(255, 255, 255, 0.596);
-  padding: 0 1em;
 }
 .head-start{
   font-family: 'Dancing Script', cursive !important;
@@ -161,8 +168,35 @@ padding: 1em;
   height: 100vh;
 }
 .third-pg{
-  margin: auto;
+  min-height: 70vh;
+  background-image: url(../images/about-me-parallax.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  box-shadow: 2px 1px 19px 3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 1px 19px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 1px 19px 3px rgba(0,0,0,0.75);
+}
+.third-pg-wrapper{
   height: 100vh;
+}
+.third-pg::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.third-pg-parallax{
+/* border: 5px red solid; */
+background-color: rgba(0, 0, 0, 0.75);
+display: grid;
+place-items: center;
+min-height: inherit;
+
+}
+.third-pg-parallax p{
+  color: rgb(200, 200, 200);
+  width: 50ch;
+
 }
 .scs-college{
   float: right;
@@ -309,11 +343,70 @@ svg.close-btn:hover path{
   background-color: darkorchid;
   border: 3px solid darkorchid;
 }
+.underline{
+  background: linear-gradient(90deg,rgb(241, 77, 241),purple,rgb(184, 64, 244));
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 3px;
+  }
+  .underline-transition{
+    animation: underline-animation 5s;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+  .from-top {
+    /* grid-column: 2 / 3; */
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+  }
+  
+  .from-down {
+    /* grid-column: 3 / 4; */
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+  
+  .from-down,
+  .from-top {
+    transition: opacity 1s ease-in, -webkit-transform 1s ease-in;
+    transition: opacity 1s ease-in, transform 1s ease-in;
+    transition: opacity 1s ease-in, transform 1s ease-in,
+      -webkit-transform 1s ease-in;
+    opacity: 0;
+  }
+  
+  .from-down.appear,
+  .from-top.appear {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+@keyframes underline-animation {
+  from {
+    background-size: 0% 3px;
+  }
+  to {
+    background-size: 100% 3px;
+  }
+}
 @media screen and (max-width:760px) {
   .c-options{
     padding:5em 0em;
   }
   .sticky-section{
     bottom: 15%;
+  }
+  .third-pg-parallax p{
+    width: 30ch;
+  }
+  .main-page{
+    padding: 2vh 1em;
   }
 }
