@@ -29,7 +29,15 @@
 
 
  <section id="main-content" class="main-page">
-   
+  <button onclick="showResume()" id="resume-btn" class="resume-btn">Resume</button>
+  <div id="resume-wrapper" class="resume-wrapper">
+    <img loading="lazy" class="resume-img" src="/images/my-resume.svg" alt="resume" class="resume">
+    <div class="resume-btn-container">
+      <a onclick="closeResume()" id="resume-closebtn" class="resume-closebtn">Close</a>
+      <a class="resume-downloadBtn" href="public/MK-Nayak-Resume.pdf" download="MK Nayak Resume">Download</a>
+    </div>
+    
+  </div>
   <div class="landing-wrapper">
     <div class="avatar fade-in from-top"><img loading="lazy" class="rounded fluid" src="/images/avatar.jpg" alt="avatar"></div>
     
@@ -78,11 +86,11 @@
     </div>
    </div>
 
-  <div class="sticky-section">
- <img loading="lazy" src="/images/me-ftr.png" alt="my pic">
- <p class="text-white fs-2">So let's connect!</p>
- <button onclick="showOptions()" id="connect-btn" class="ftr-btn">Say Hi!</button>
-</div>
+    <div class="sticky-section fade-in">
+    <img loading="lazy" src="/images/me-ftr.png" alt="my pic">
+    <p class="text-white fs-2">So let's connect!</p>
+    <button onclick="showOptions()" id="connect-btn" class="ftr-btn">Say Hi!</button>
+    </div>
 <div class="credit text-light"><p>© 2022 MK Nayak</p></div>
  </footer>
 

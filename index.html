@@ -40,7 +40,7 @@
           <div class="mx-auto"></div>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a id="resume" class="nav-link resume-cv" aria-current="page" href="#">Resume</a>
+              <a onclick="showResume()" id="resume" class="nav-link resume-cv" aria-current="page">Resume</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
@@ -52,7 +52,7 @@
               <a class="nav-link" href="#connect-w-us">Connect</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="/blog.html">Blog</a>
             </li>
           </ul>
           
@@ -61,6 +61,15 @@
       </div>
       
     </nav>
+    <!-- .................resume preview.............. -->
+    <div id="resume-wrapper" class="resume-wrapper">
+      <img loading="lazy" class="resume-img" src="/images/my-resume.svg" alt="resume" class="resume">
+      <div class="resume-btn-container">
+        <a onclick="closeResume()" id="resume-closebtn" class="resume-closebtn">Close</a>
+        <a class="resume-downloadBtn" href="public/MK-Nayak-Resume.pdf" download="MK Nayak Resume">Download</a>
+      </div>
+      
+    </div>
       <!-- ---------------------------------------------- -->
       <section class="landing-page">
         <div class="hero-text">
@@ -104,7 +113,7 @@
         </div>
       </section>
 
-      <section id="skills" class="skills-wrapper">
+      <section id="skills" class="skills-wrapper fade-in from-down">
         <div class="skills">
           <div class="sec-name">
             <p class="fs-1 theme-text divider">My Tech Stack</p>
@@ -170,7 +179,7 @@
       
       </section>
 
-    <section id="projects" class="projects">
+    <section id="projects" class="projects fade-in from-down">
       <div class="svg3-wrapper">
       <p class="fs-1 theme-text divider"><img loading="lazy" src="images/Laptop.svg" alt="project image"> Projects</p>
       </div>
@@ -235,14 +244,14 @@
       <p class="fs-2 theme-text separator divider">Connect With Me</p>
       <div class="connect-wrapper">
       <div class="contact-element contact-option-wrapper">
-        <p class="theme-text fs-2">Hey there!</p>
+        <p class="theme-text fs-2 fade-in from-top">Hey there!</p>
         <div class="contact-options">
           <a href="mailto:mknayakofficial@gmail.com"><img loading="lazy" src="/images/gmail.svg" alt="gmail"></a>
           <a target="_blank" href="https://www.linkedin.com/in/minaketan-nayak/"><img loading="lazy" src="/images/linkedin.svg" alt="linkedin"></a>
           <a target="_blank" href="https://wa.me/+918895327771"><img loading="lazy" src="/images/whatsapp.svg" alt="whatsapp"></a>
         </div>
       </div>
-      <div class="contact-element contact-form">
+      <div class="contact-element contact-form fade-in from-down">
       <div id="cntctus" class="separator edited-background-color text-light"><h2>Contact</h2></div>
       <form reset(); return false; class="px-5 edited-background-color" action="https://formsubmit.co/ed2887a57bc7a0d7e07fcdb768f6083d" method="POST">
           <!-- Honeypot -->
@@ -290,7 +299,7 @@
           </div>
           <div class="credit text-light"><p>© 2022 MK Nayak</p></div>
           <div class="ftr-links">
-            <a href="#">Get In Touch</a>
+            <a onclick="showResume()" class="resume-cv">Resume</a>
           <a href="#">Back to top</a>
           </div>
         </div>
