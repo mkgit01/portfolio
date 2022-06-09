@@ -118,7 +118,7 @@ z-index: 2;
 }
 .navbar .navbar-nav .nav-link:hover{
     background-color: transparent;
-    color: var(--_Color-secondary);
+    color: #ca90ff;
 }
 .resume-wrapper{
     position: fixed;
@@ -159,13 +159,24 @@ z-index: 2;
     }
 
 .resume-cv{
-    border: var(--_Detail-primary) 0.125em solid;
-    padding: 0.28em 1em;
-    border-radius: 90vw;
+    border: none;
+    position: relative;
     cursor: pointer;
+    margin: 0 1em;
+    text-align: center;
 }
-.resume-cv:hover{
-    border: var(--_Color-secondary) 0.125em solid;
+.resume-cv::before{
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: #ca90ff;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: all ease 0.3s;
+}
+.resume-cv:hover::before{
+    width: 100%;
 }
 #theme-icon{
     cursor: pointer;
@@ -526,6 +537,7 @@ margin: 0 1em;
     transform: translateY(0);
     opacity: 1;
   }
+
 @media screen and (max-height:565px) and (max-width:973px){
     .landing-page{
         margin-bottom: 19em;
@@ -544,6 +556,10 @@ margin: 0 1em;
     border: none;
     padding: 0.28em 1em;
     border-radius: 0vw;
+}
+.navbar .navbar-nav .nav-link{
+    border-bottom: 1px solid #ca90ff;
+    padding: 0.5em 0.5em;
 }
 .resume-cv:hover{
     border: none;
