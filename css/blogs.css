@@ -102,7 +102,7 @@ body{
 .main-page{
   background-image: url(../images/blog-banner-Blog.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
   background-attachment: fixed;
   background-color: rgb(3, 7, 43);
 }
@@ -255,6 +255,16 @@ footer p{
   text-align: center;
   color: white;
   /* padding: 0 1em; */
+}
+.construction-warning{
+  position: fixed;
+  padding:1em 1em;
+  bottom: 0;
+  right: 0;
+  color: red;
+  background-color: black;
+  width: max-content;
+  z-index: 1000;
 }
 @media screen and (max-width:915px){
   .blogs-page{
