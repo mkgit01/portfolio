@@ -23,6 +23,7 @@
   <div id="preloader" class="loader-wrapper">
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
   </div>
+
     <!-- NavBar -->
     <nav class="navbar fixed-top p-md-3 navbar-expand-lg navbar-dark">
       <div class="container">
@@ -64,10 +65,14 @@
     </nav>
     <!-- .................resume preview.............. -->
     <div id="resume-wrapper" class="resume-wrapper">
-      <img loading="lazy" class="resume-img" src="/images/my-resume.svg" alt="resume" class="resume">
+      <div onclick="nextResume()" id="next-resume" class="next-btns-holder resume-next"><img class="next-btns" src="https://img.icons8.com/material-rounded/48/undefined/circled-chevron-right.png"/></div>
+      <img id="resume-img" loading="lazy" class="resume-img resume-1" src="/images/my-resume.svg" alt="resume">
+      <img id="cv" loading="lazy" class="resume-img resume-2" src="/images/MK-Nayak-cv.png" alt="cv">
+      <div onclick="prevResume()" id="prev-resume" class="next-btns-holder resume-prev"><img class="next-btns" src="https://img.icons8.com/material-rounded/48/undefined/circled-chevron-left.png"/></div>
       <div class="resume-btn-container">
         <a onclick="closeResume()" id="resume-closebtn" class="resume-closebtn">Close</a>
-        <a class="resume-downloadBtn" href="public/MK-Nayak-Resume.pdf" download="MK Nayak Resume">Download</a>
+        <a id="resume-download" class="resume-downloadBtn" href="public/MK-Nayak-Resume.pdf" download="MK Nayak Resume">Download</a>
+        <a id="cv-download" class="resume-downloadBtn" href="public/MK-Nayak-cv.pdf" download="MK Nayak CV">Download</a>
       </div>
       
     </div>
@@ -110,13 +115,13 @@
         
 
         <div class="abtme-text">
-          <p class="fs-2 text-white fw-light tagline">I like to challenge myself and learn while solving problem showing my creativity through work, giving it a unique touch</p>
+          <p class="fs-2 text-white fw-light tagline">I like to challenge myself and learn while solving problems, showing my creativity through work, giving it a unique touch</p>
         </div>
       </section>
 
       <section id="skills" class="skills-wrapper fade-in from-down">
         <div class="skills">
-          <div class="sec-name">
+          <div class="sec-name-ts">
             <p class="fs-1 theme-text divider">My Tech Stack</p>
           </div>
           <div class="svg2-wrapper">
@@ -181,7 +186,7 @@
       </section>
 
     <section id="projects" class="projects fade-in from-down">
-      <div class="svg3-wrapper">
+      <div class="svg3-wrapper sec-name">
       <p class="fs-1 theme-text divider"><img loading="lazy" src="images/Laptop.svg" alt="project image"> Projects</p>
       </div>
       <div class="project">
@@ -242,7 +247,7 @@
     </section>
 
     <section id="connect-w-us" class="connect">
-      <p class="fs-2 theme-text separator divider">Connect With Me</p>
+      <p class="fs-2 theme-text sec-name divider">Connect With Me</p>
       <div class="connect-wrapper">
       <div class="contact-element contact-option-wrapper">
         <p class="theme-text fs-2 fade-in from-top">Hey there!</p>

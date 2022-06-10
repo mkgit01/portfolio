@@ -4,7 +4,6 @@ window.addEventListener("load", function(){
   loader.style.display = "none";
 })
 
-
 // JavaScript code
 function search_blog() {
   let input = document.getElementById('searchbar').value

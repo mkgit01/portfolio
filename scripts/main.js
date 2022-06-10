@@ -50,8 +50,38 @@ trigger.onclick = function(){
 }
 //Resume Show button
 const resumeContainer = document.getElementById('resume-wrapper');
+const resumeClosebtn = document.getElementById('resume-closebtn');
+const resumeDownload = document.getElementById('resume-download');
+const cvDownload = document.getElementById('cv-download');
+const resume = document.getElementById('resume-img');
+const cv = document.getElementById('cv');
+const nextResumeBtn = document.getElementById('next-resume');
+const prevResumeBtn = document.getElementById('prev-resume');
+
+
+cv.style.display = "none";
+resume.style.display = "block";
+prevResumeBtn.style.display = "none";
+cvDownload.style.display = "none";
+resumeDownload.style.display = "initial";
 resumeContainer.style.display = "none";
 
+function nextResume(){
+  resume.style.display = "none";
+  cv.style.display = "block";
+  nextResumeBtn.style.display = "none";
+  prevResumeBtn.style.display = "block";
+  cvDownload.style.display = "initial";
+  resumeDownload.style.display = "none";
+}
+function prevResume(){
+  resume.style.display = "block";
+  cv.style.display = "none";
+  prevResumeBtn.style.display = "none";
+  nextResumeBtn.style.display = "block";
+  cvDownload.style.display = "none";
+  resumeDownload.style.display = "initial";
+}
 function showResume(){
     resumeContainer.style.display = "block";
 }
